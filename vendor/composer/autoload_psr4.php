@@ -7,13 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'TelegramBot\\Api\\' => array($vendorDir . '/telegram-bot/api/src'),
-    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
-    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
-    'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
-    'PhpOption\\' => array($vendorDir . '/phpoption/phpoption/src/PhpOption'),
     'MessageHandler\\' => array($baseDir . '/src/MessageHandler'),
-    'GrahamCampbell\\ResultType\\' => array($vendorDir . '/graham-campbell/result-type/src'),
-    'Dotenv\\' => array($vendorDir . '/vlucas/phpdotenv/src'),
     'Controller\\' => array($baseDir . '/src/Controller'),
     'Constants\\' => array($baseDir . '/src/Constants'),
     'CallbackHandler\\Handlers\\WineNewHandler' => array($baseDir . '/src/CallbackHandler/Handlers/WineNewHandler'),

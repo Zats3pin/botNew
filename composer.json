@@ -1,7 +1,6 @@
 {
     "require": {
-        "telegram-bot/api": "^2.5",
-        "vlucas/phpdotenv": "*"
+        "telegram-bot/api": "^2.5"
     },
     "autoload": {
         "psr-4": {
