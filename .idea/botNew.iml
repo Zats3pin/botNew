@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler" isTestSource="false" packagePrefix="CallbackHandler\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Constants" isTestSource="false" packagePrefix="Constants\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/Controller" isTestSource="false" packagePrefix="Controller\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/MessageHandler" isTestSource="false" packagePrefix="MessageHandler\" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler/Handlers/WineChoiceHandler" isTestSource="false" packagePrefix="CallbackHandler\Handlers\WineChoiceHandler" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler/Handlers/WineDegustHandler" isTestSource="false" packagePrefix="CallbackHandler\Handlers\WineDegustHandler" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler/Handlers/WineDegustHandler/DegustItem" isTestSource="false" packagePrefix="CallbackHandler\Handlers\WineDegustHandler\WineDegustHandler\DegustItem" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler/Handlers/WineFactsHandler" isTestSource="false" packagePrefix="CallbackHandler\Handlers\WineFactsHandler" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler/Handlers/WineMenuHandler" isTestSource="false" packagePrefix="CallbackHandler\Handlers\WineMenuHandler" />
+      <sourceFolder url="file://$MODULE_DIR$/src/CallbackHandler/Handlers/WineNewHandler" isTestSource="false" packagePrefix="CallbackHandler\Handlers\WineNewHandler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/telegram-bot/api" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/vlucas/phpdotenv" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

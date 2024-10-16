@@ -1,0 +1,20 @@
+{
+    "require": {
+        "telegram-bot/api": "^2.5",
+        "vlucas/phpdotenv": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Constants\\": "src/Constants/",
+            "CallbackHandler\\": "src/CallbackHandler/",
+            "MessageHandler\\": "src/MessageHandler/",
+            "Controller\\": "src/Controller/",
+            "CallbackHandler\\Handlers\\WineChoiceHandler": "src/CallbackHandler/Handlers/WineChoiceHandler",
+            "CallbackHandler\\Handlers\\WineDegustHandler": "src/CallbackHandler/Handlers/WineDegustHandler",
+            "CallbackHandler\\Handlers\\WineFactsHandler": "src/CallbackHandler/Handlers/WineFactsHandler",
+            "CallbackHandler\\Handlers\\WineMenuHandler": "src/CallbackHandler/Handlers/WineMenuHandler",
+            "CallbackHandler\\Handlers\\WineNewHandler": "src/CallbackHandler/Handlers/WineNewHandler",
+            "CallbackHandler\\Handlers\\WineDegustHandler\\WineDegustHandler\\DegustItem": "src/CallbackHandler/Handlers/WineDegustHandler/DegustItem"
+        }
+    }
+}
