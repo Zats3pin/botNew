@@ -20,9 +20,14 @@ class CallbackHandler implements CallbackHandlerInterface
         $this->wineDegustHandler = new WineDegustHandler($bot);
     }
 
-    public function handleCallback($chatId, $callback, $messageId)
+    public function handleCallback($update)
     {
-        switch ($callback) {
+        $callbackQuery = $update->getCallbackQuery();
+        $chatId = $callbackQuery->getMessage()->getChat()->getId();
+        $messageId = $callbackQuery->getMessage()->getMessageId();
+        $callbackData = $callbackQuery->getData();
+
+        switch ($callbackQuery->getData()) {
             case CallbackConstants::WineChoice:
                 $this->wineChoice($chatId);
                 break;

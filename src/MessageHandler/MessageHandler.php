@@ -17,17 +17,18 @@ class MessageHandler implements MessageHandlerInterface
 
     public function handleMessage(Message $message)
     {
-        switch ($message->GetText()) {
+        $chatId = $message->getChat()->getId();
+        switch ($message->getText()) {
             case '/start':
-                $this->sendWelcomeMessage($message->getChat()->getId());
+                $this->sendWelcomeMessage($chatId);
                 break;
 
             case '/help':
-                $this->sendHelpMessage($message->getChat()->getId());
+                $this->sendHelpMessage($chatId);
                 break;
 
             default:
-                $this->sendUnknownMessage($message->getChat()->getId());
+                $this->sendUnknownMessage($chatId);
                 break;
         }
     }

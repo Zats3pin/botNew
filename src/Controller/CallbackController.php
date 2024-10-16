@@ -3,6 +3,7 @@
 namespace Controller;
 
 use CallbackHandler\CallbackHandlerInterface;
+use TelegramBot\Api\Types\Update;
 
 class CallbackController
 {
@@ -13,9 +14,9 @@ class CallbackController
         $this->handler = $handler;
     }
 
-    public function processButton($chatId, $text, $messageId)
+    public function processButton(Update $update)
     {
 
-        $this->handler->handleCallback($chatId, $text, $messageId);
+        $this->handler->handleCallback($update);
     }
 }

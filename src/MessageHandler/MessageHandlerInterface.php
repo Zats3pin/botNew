@@ -2,8 +2,6 @@
 
 namespace MessageHandler;
 
-
-
 use TelegramBot\Api\Types\Message;
 
 interface MessageHandlerInterface

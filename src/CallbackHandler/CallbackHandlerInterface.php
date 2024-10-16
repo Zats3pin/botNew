@@ -2,13 +2,12 @@
 
 namespace CallbackHandler;
 
+use TelegramBot\Api\Types\Update;
+
 interface CallbackHandlerInterface
 {
-    public function handleCallback($chatId, $callback, $messageId);
-
-
+    public function handleCallback(Update $message);
     public function wineFacts($chatId);
-
     public function degust($chatId);
     public function wineNew($chatId);
     public function wineChoice($chatId);

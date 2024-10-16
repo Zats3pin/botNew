@@ -30,21 +30,16 @@ while (true) {
     $updates = $bot->getUpdates($lastUpdateId + 1);
 
     foreach ($updates as $update) {
+        $message = $update->getMessage();  // Перемещаем это выше
+
         if ($update->getCallbackQuery()) {
-            // Получаем данные из callback_query
-            $callbackQuery = $update->getCallbackQuery();
-            $callbackData = $callbackQuery->getData(); // Данные из callback_data
-            $chatId = $callbackQuery->getMessage()->getChat()->getId();
-            $messageId = $callbackQuery->getMessage()->getMessageId();
-            $CallbackController->processButton($chatId,$callbackData,$messageId);
+            // Передаем данные из callback_query
+            $CallbackController->processButton($update);
         }
-        $message = $update->getMessage();
 
         $lastUpdateId = $update->getUpdateId();
-        if ($message) {
-            $chatId = $message->getChat()->getId();
-            $text = $message->getText();
 
+        if ($message) {
             // Передаем сообщение в контроллер
             $messageController->processMessage($message);
 
@@ -52,6 +47,8 @@ while (true) {
             $lastUpdateId = $update->getUpdateId();
         }
     }
+
+
 
     // Пауза между запросами
     sleep(1);
