@@ -8,7 +8,6 @@ use Controller\MessageController;
 use MessageHandler\MessageHandler;
 use TelegramBot\Api\BotApi;
 
-
 $config = require __DIR__ . '\Config.php';
 
 // Получаем токен бота из конфигурации
@@ -47,7 +46,7 @@ while (true) {
             $text = $message->getText();
 
             // Передаем сообщение в контроллер
-            $messageController->processMessage($chatId, $text);
+            $messageController->processMessage($message);
 
             // Обновляем ID последнего обновления
             $lastUpdateId = $update->getUpdateId();

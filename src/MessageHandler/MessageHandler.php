@@ -4,6 +4,7 @@ namespace MessageHandler;
 
 use Constants\CallbackConstants;
 use TelegramBot\Api\Types\Inline\InlineKeyboardMarkup;
+use TelegramBot\Api\Types\Message;
 
 class MessageHandler implements MessageHandlerInterface
 {
@@ -14,19 +15,19 @@ class MessageHandler implements MessageHandlerInterface
         $this->bot = $bot;
     }
 
-    public function handleMessage($chatId, $text)
+    public function handleMessage(Message $message)
     {
-        switch ($text) {
+        switch ($message->GetText()) {
             case '/start':
-                $this->sendWelcomeMessage($chatId);
+                $this->sendWelcomeMessage($message->getChat()->getId());
                 break;
 
             case '/help':
-                $this->sendHelpMessage($chatId);
+                $this->sendHelpMessage($message->getChat()->getId());
                 break;
 
             default:
-                $this->sendUnknownMessage($chatId);
+                $this->sendUnknownMessage($message->getChat()->getId());
                 break;
         }
     }

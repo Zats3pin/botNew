@@ -13,9 +13,9 @@ class MessageController
         $this->handler = $handler;
     }
 
-    public function processMessage($chatId, $text)
+    public function processMessage($message)
     {
 
-        $this->handler->handleMessage($chatId, $text);
+        $this->handler->handleMessage($message);
     }
 }
